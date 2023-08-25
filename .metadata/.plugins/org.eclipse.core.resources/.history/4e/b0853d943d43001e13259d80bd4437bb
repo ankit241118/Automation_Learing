@@ -1,0 +1,23 @@
+package Sdet_QA_Programs;
+
+import java.util.Arrays;
+
+public class _31_InbuiltSortingMethods {
+public static void main(String[] args) {
+	int ar[]= {22,44,76,87,32,65};
+	
+	System.out.println("Before sorting :"+Arrays.toString(ar));
+	
+	//Using parallel sort
+	
+   Arrays.parallelSort(ar);
+	System.out.println("After sorting :"+Arrays.toString(ar));
+	
+	
+	//Sorting using sort method
+	int ar2[]= {22,44,76,87,32,65};
+	System.out.println("Before sorting :"+Arrays.toString(ar2));
+	Arrays.sort(ar2);
+	System.out.println("After sorting :"+Arrays.toString(ar2));
+}
+}

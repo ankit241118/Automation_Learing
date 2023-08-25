@@ -1,0 +1,20 @@
+package Sdet_QA_Programs;
+
+public class _5_Reverse_number {
+public static void main(String[] args) {
+	//Using String buffer class
+	
+	
+	int x= 123456;
+	
+	StringBuffer num= new StringBuffer(String.valueOf(x));
+	StringBuffer revnum = num.reverse();
+	System.out.println(revnum);
+	
+	
+	
+	
+	
+	
+}
+}
