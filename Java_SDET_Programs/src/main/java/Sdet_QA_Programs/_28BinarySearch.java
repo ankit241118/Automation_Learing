@@ -7,7 +7,7 @@ public class _28BinarySearch {
 //For binary search array should be sorted
 //In linear search we do not require sorted array
 		int s[] = { 33, 55, 80, 95, 130, 140 };
-		int search_num = 55;
+		int search_num = 33;
 
 		int lowerlimit = 0;
 		int higherlimit = s.length - 1;

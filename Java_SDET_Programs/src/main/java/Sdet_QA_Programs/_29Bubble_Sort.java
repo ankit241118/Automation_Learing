@@ -12,7 +12,8 @@ for(int i=0;  i<s.length-1; i++) {
 
 //Inner loop. This will sort the elements. 
 //-i is done because i elements are sorted. No need to check them
-	for(int j=0;  j<s.length-i-1; j++)
+	for(int j=0;  
+			j<s.length-i-1; j++)
 	{
 		if(s[j]>s[j+1]) {
 			int temp=s[j];
