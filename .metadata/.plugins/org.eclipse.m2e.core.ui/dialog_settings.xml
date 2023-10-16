@@ -43,6 +43,7 @@
 	</section>
 	<section name="MavenProjectWizardArtifactPage">
 		<list key="groupId">
+			<item value="RestAssured_Framework"/>
 			<item value="Rest-Assured"/>
 			<item value="Java_SDET_Programs"/>
 			<item value="Pro"/>
@@ -50,6 +51,7 @@
 		<list key="name">
 		</list>
 		<list key="artifactId">
+			<item value="RestAssured_Framework"/>
 			<item value="Rest-Assured"/>
 			<item value="Java_SDET_Programs"/>
 			<item value="Pero"/>
@@ -67,6 +69,14 @@
 		</list>
 	</section>
 	<section name="org.eclipse.m2e.core.pom.overview">
+		<list key="ciManagementUrl">
+		</list>
+		<list key="ciManagementSystem">
+		</list>
+		<list key="issueManagementSystem">
+		</list>
+		<list key="issueManagementUrl">
+		</list>
 	</section>
 	<section name="org.eclipse.m2e.core.pom.dependencies">
 	</section>
