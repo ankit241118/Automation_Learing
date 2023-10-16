@@ -1,8 +1,9 @@
 package api.tests;
-
 import org.hamcrest.Matchers;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
+
+import com.github.javafaker.Faker;
 
 import api.endpoints.UserEndpoints;
 import api.payloads.UserPOJO;
@@ -13,22 +14,22 @@ UserPOJO p;
 @BeforeClass
 void setTestData(){
 	 p = new UserPOJO();
-	p.setId(1);
+	p.setId(new Faker().idNumber().hashCode());
 	p.setUsername("Ankit11");
 	p.setFirstName("Ankit");
 	p.setLastName("Kayasth");
 	p.setEmail("akayasth100@gmail.com");
 	p.setPassword("1234556");
-	p.setPhone("789456123");	
-	
-}
+	p.setPhone("789456123");	}
 	
 @Test(priority = 1)
 void createUserTest() {
+	System.out.println("*******Creating user*********");
 	Response res = UserEndpoints.createUser(p);
 	res.then().log().body();
 	res.then().assertThat().statusCode(200);
-}
+	System.out.println("*****User created******");
+	System.out.println();}
 
 @Test(priority = 2)
 void getUserTest() {
@@ -47,8 +48,9 @@ void updateUserTest() {
 	p.setFirstName("Ansh");
 Response res = UserEndpoints.updateUser(p,p.getUsername());
 res.then().log().body();
-//UserEndpoints.getUser(p.getUsername()).then().assertThat().body("firstName",Matchers.equalTo("Ansh"));
+UserEndpoints.getUser(p.getUsername()).then().assertThat().body("firstName",Matchers.equalTo(p.getFirstName()));
    UserEndpoints.getUser(p.getUsername()).then().log().all();
+   
 }
 
 

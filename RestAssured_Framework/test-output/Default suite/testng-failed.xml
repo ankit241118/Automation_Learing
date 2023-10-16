@@ -5,7 +5,6 @@
     <classes>
       <class name="api.tests.UserTests">
         <methods>
-          <include name="getUserTest"/>
           <include name="setTestData"/>
           <include name="updateUserTest"/>
         </methods>

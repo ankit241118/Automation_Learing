@@ -1,7 +1,5 @@
 package api.endpoints;
 
-import org.testng.annotations.Test;
-
 public class Routes {
 //This class contains all the api request urls 
 //All the variable will be public static

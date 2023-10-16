@@ -72,8 +72,14 @@ public class TestUtil {
 
 public static String[][] readexcel1() {
 	
-	XSSFWorkbook mybook = new XSSFWorkbook(
-			System.getProperty("user.dir") + "\\\\Test_Data\\\\New Microsoft Excel Worksheet.xlsx");
+	XSSFWorkbook mybook = null;
+	try {
+		mybook = new XSSFWorkbook(
+				System.getProperty("user.dir") + "\\\\Test_Data\\\\New Microsoft Excel Worksheet.xlsx");
+	} catch (IOException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
 
 	XSSFSheet mysheet = mybook.getSheet("Sheet1");
 
@@ -102,13 +108,14 @@ String [][] mydata = new String [Lastrowindex] [Lastcolumnnumber]  ;
   	mydata [rowindex][columnindex] = mycell.toString() ;
 		}
 		
-		return mydata ;
-		
 
 	}
+	return mydata;
+	
 
 }
-	
+
+
 }	
 	
 	
@@ -116,4 +123,4 @@ String [][] mydata = new String [Lastrowindex] [Lastcolumnnumber]  ;
 	
 	
 	
-}
+
