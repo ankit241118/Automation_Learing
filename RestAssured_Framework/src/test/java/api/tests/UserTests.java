@@ -1,6 +1,7 @@
 package api.tests;
 import org.hamcrest.Matchers;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import com.github.javafaker.Faker;
@@ -11,7 +12,7 @@ import io.restassured.response.Response;
 
 public class UserTests {
 UserPOJO p;
-@BeforeClass
+@BeforeClass ()
 void setTestData(){
 	 p = new UserPOJO();
 	p.setId(new Faker().idNumber().hashCode());
