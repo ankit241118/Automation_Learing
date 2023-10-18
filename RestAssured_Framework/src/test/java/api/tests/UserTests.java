@@ -15,8 +15,9 @@ UserPOJO p;
 @BeforeClass ()
 void setTestData(){
 	 p = new UserPOJO();
+	 Faker f = new Faker();
 	p.setId(new Faker().idNumber().hashCode());
-	p.setUsername("Ankit11");
+	p.setUsername(f.name().username());
 	p.setFirstName("Ankit");
 	p.setLastName("Kayasth");
 	p.setEmail("akayasth100@gmail.com");
@@ -46,7 +47,7 @@ void getUserTest() {
 
 @Test(priority = 3)
 void updateUserTest() {
-	p.setFirstName("Ansh");
+	p.setUsername("Ansh");
 Response res = UserEndpoints.updateUser(p,p.getUsername());
 res.then().log().body();
 UserEndpoints.getUser(p.getUsername()).then().assertThat().body("firstName",Matchers.equalTo(p.getFirstName()));

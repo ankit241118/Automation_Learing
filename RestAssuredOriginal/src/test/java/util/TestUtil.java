@@ -99,13 +99,13 @@ public static String[][] readexcel1() {
 	int rowindex;
 	
 String [][] mydata = new String [Lastrowindex] [Lastcolumnnumber]  ;	
-	for (rowindex = 0; rowindex <= Lastrowindex; rowindex++) {
+	for (rowindex = 1; rowindex <= Lastrowindex; rowindex++) {
 		for (columnindex = 0; columnindex < Lastcolumnnumber; columnindex++) {
 			myrow = mysheet.getRow(rowindex);
 			mycell1 = myrow.getCell(columnindex);
 			
 			
-  	mydata [rowindex][columnindex] = mycell.toString() ;
+  	mydata [rowindex-1][columnindex] = mycell.toString() ;
 		}
 		
 
