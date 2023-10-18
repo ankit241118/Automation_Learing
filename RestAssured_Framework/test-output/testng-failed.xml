@@ -8,7 +8,7 @@
     <classes>
       <class name="api.tests.UserTests">
         <methods>
-          <include name="getUserTest"/>
+          <include name="updateUserTest"/>
           <include name="setTestData"/>
         </methods>
       </class> <!-- api.tests.UserTests -->

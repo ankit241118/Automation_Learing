@@ -71,7 +71,6 @@
 </dependency>
 </dependencies>
 
-
 <profiles>
 <profile><id>E2E</id>
 <build>
@@ -90,9 +89,7 @@
 </plugins>
 	
 </pluginManagement>	
-</build>
-
-
+</build>  
 </profile>
 <profile><id>Datadriven</id>
 <build>
@@ -113,5 +110,4 @@
 </build>
 </profile>
 </profiles>
-
 </project>
